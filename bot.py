@@ -1,16 +1,11 @@
 # -*- coding: utf-8 -*-
 import os
+import logging
 from telegram.ext import Updater, MessageHandler, Filters
 
-# Example of your code beginning
-#           Config vars
 token = os.environ['TELEGRAM_TOKEN']
 
-#       Your bot code below
-# bot = telebot.TeleBot(token)
-# some_api = some_api_lib.connect(some_api_token)
-#              ...
-
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 updater = Updater(token=token)
 dispatcher = updater.dispatcher
 
